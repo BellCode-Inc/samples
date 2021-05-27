@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CreateSettingDto {
+  ID: String!
+  key: String!
+  value: String!
+  is_front: Float!
+}
+
+type Query {
+  getSetting(key: String!): [CreateSettingDto!]!
+  getSettingOne(key: String!): CreateSettingDto!
+}
+
+type Mutation {
+  createSetting(data: inputSetting!): CreateSettingDto!
+}
+
+input inputSetting {
+  key: String!
+  value: String!
+  is_front: Float!
+}
